@@ -45,5 +45,29 @@ body {
   }
 
   .card__title {
+    padding: 1rem;
+  }
+  .card__description {
+    padding: 0 1rem;
+  }
+
+  button {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid var(--clr-primary);
+    background: transparent;
+    color: var(--clr-primary);
+    border-radius: var(--radius);
+    transition: background 200ms ease-in, color 200ms ease-in;
+  }
+  &:hover {
+    transform: scale(1.02);
+  }
+  &:hover .card__btn {
+    background: var(--clr-primary);
+    color: white;
   }
 }
