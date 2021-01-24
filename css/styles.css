@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+/* 
+=================
+    variables
+=================
+*/
+:root {
+  --clr-grey-1: #a3a3a3;
+  --ff-primary: "Montserrat", sans-serif;
+}
+
+/* 
+=================
+    globals
+=================
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  margin: 2rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 0.3fr));
+  grid-gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid black;
+  box-shadow: 4px 4px var(--clr-grey-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 200ms ease-in, box-shadow 200ms ease-in;
+}
+.card:hover {
+  border: 1px solid black;
+  box-shadow: 8px 8px blue;
+}
+@keyframes arrow {
+  0% {
+    left: 0.5rem;
+  }
+  100% {
+    left: 1.5rem;
+  }
+}
+.card:hover a::after {
+  animation: arrow 1s ease-in-out infinite alternate;
+}
+.card img {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+}
+.card header {
+  padding: 1rem;
+}
+.card .description {
+  overflow: hidden;
+  height: 110px;
+  padding: 0 1rem 1rem 1rem;
+}
+.card .link {
+  padding: 1rem;
+}
+.card .link a {
+  text-decoration: none;
+  font-weight: bold;
+  color: blue;
+}
+.card .link a::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: relative;
+  left: 0.5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
